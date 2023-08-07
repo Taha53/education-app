@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+api:
+  version: 1.0
+
+swagger:
+  enabled: true
+  title: Student Education API
+  description: Student Education services.
+  useDefaultResponseMessages: false
+  enableUrlTemplating: false
+  deepLinking: true
+  defaultModelsExpandDepth: 1
+  defaultModelExpandDepth: 1
+  displayOperationId: false
+  displayRequestDuration: false
+  filter: false
+  maxDisplayedTags: 0
+  showExtensions: false
