@@ -1,6 +1,7 @@
 package com.assessment.education.controller;
 
 import com.assessment.education.config.JwtTokenUtil;
+import com.assessment.education.model.CourseConstant;
 import com.assessment.education.model.JwtRequest;
 import com.assessment.education.model.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,9 +44,9 @@ public class JwtAuthenticationController {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
-            throw new Exception("USER_DISABLED", e);
+            throw new Exception(CourseConstant.USER_DISABLED.getValue(), e);
         } catch (BadCredentialsException e) {
-            throw new Exception("INVALID_CREDENTIALS", e);
+            throw new Exception(CourseConstant.INVALID_CREDENTIALS.getValue(), e);
         }
     }
 }
